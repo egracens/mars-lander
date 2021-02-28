@@ -8,6 +8,10 @@ module Levels
       end
     end
 
+    def self.from_strings(strings)
+      strings.slice(1, strings.length)
+    end
+
     def min_x
       0
     end

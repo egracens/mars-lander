@@ -1,17 +1,26 @@
 module Game
   class Loop
-    TICK_INTERVAL = 0.1
+    FPS = 30
 
-    attr_reader :level, :graphics_engine
+    attr_reader :interpreter, :graphics_engine, :bot
 
-    def initialize(level:, graphics_engine:)
-      @level = level
+    def initialize(interpreter:, graphics_engine:, bot:)
+      @interpreter = interpreter
       @graphics_engine = graphics_engine
+      @bot = bot
     end
 
     def start
-      graphics_engine.render_level(level)
-      # sleep TICK_INTERVAL
+      response_from_world = interpreter.first_turn
+      response_from_bot = bot.first_turn(response_from_world)
+      loop do
+        response_from_interpreter = interpreter.turn(response_from_bot)
+        response_from_bot = bot.turn(response_from_interpreter)
+        puts "Interpreter: #{response_from_interpreter}"
+        puts "Bot: #{response_from_bot}"
+        graphics_engine.render_world_state(interpreter.world)
+        sleep 1.0 / FPS
+      end
     end
   end
 end

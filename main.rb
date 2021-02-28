@@ -1,6 +1,9 @@
 require './config'
 
+world = Game::World.new(Levels::EasyOnTheRight.new)
+
 Game::Loop.new(
-  level: Levels::EasyOnTheRight.new,
-  graphics_engine: Graphics::Console::Engine.new
+  interpreter: Game::Interpreter.new(world),
+  graphics_engine: Graphics::GosuBackend::Engine.new,
+  bot: Bots::DummyBot.new
 ).start

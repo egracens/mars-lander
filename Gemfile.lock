@@ -1,14 +1,14 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    mini_magick (4.11.0)
+    gosu (1.1.1.1)
     zeitwerk (2.4.2)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  mini_magick
+  gosu
   zeitwerk
 
 BUNDLED WITH
