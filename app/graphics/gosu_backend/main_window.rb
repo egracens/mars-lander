@@ -7,8 +7,8 @@ module Graphics
       attr_accessor :surface_lines, :lander, :surface_renderer, :lander_renderer, :statistics_renderer
 
       def initialize
-        super(640, 480)
-        @transformer = Geometry::CoordinatesTransformer.new(7000, 3000, 640, 480)
+        super(700, 300)
+        @transformer = Geometry::CoordinatesTransformer.new(7000, 3000, 700, 300)
         @surface_lines = []
         @lander = nil
         @surface_renderer = Renderers::SurfaceRenderer.new(self)

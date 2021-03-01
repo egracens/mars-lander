@@ -1,7 +1,12 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    coderay (1.1.3)
     gosu (1.1.1.1)
+    method_source (1.0.0)
+    pry (0.14.0)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
     zeitwerk (2.4.2)
 
 PLATFORMS
@@ -9,6 +14,7 @@ PLATFORMS
 
 DEPENDENCIES
   gosu
+  pry
   zeitwerk
 
 BUNDLED WITH

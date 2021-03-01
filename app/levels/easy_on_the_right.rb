@@ -10,6 +10,6 @@ module Levels
       Geometry::Point.new(6999, 800)
     ])
 
-    describe_lander(position: Geometry::Point.new(2500, 2700), fuel: 550)
+    describe_lander(position: Geometry::Point.new(2700, 2500), fuel: 550)
   end
 end

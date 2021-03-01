@@ -14,6 +14,7 @@ module Graphics
 
           font.draw_text("X: #{lander.position.x.round(2)}", 10, 20, 1, 1.0, 1.0, Gosu::Color::WHITE)
           font.draw_text("Y: #{lander.position.y.round(2)}", 10, 40, 1, 1.0, 1.0, Gosu::Color::WHITE)
+          font.draw_text("Power: #{lander.power}", 10, 60, 1, 1.0, 1.0, Gosu::Color::WHITE)
           font.draw_text("Fuel: #{lander.fuel.round(2)}", 150, 20, 1, 1.0, 1.0, Gosu::Color::WHITE)
           font.draw_text("Horizontal Speed: #{lander.speed.x.round(2)}", 150, 40, 1, 1.0, 1.0, Gosu::Color::WHITE)
           font.draw_text("Vertical Speed: #{lander.speed.y.round(2)}", 150, 60, 1, 1.0, 1.0, Gosu::Color::WHITE)

@@ -7,10 +7,12 @@ module Geometry
       @b = b
     end
 
-    def points
-      (0..1800).step(10).map do |x|
-        Point.new(x, Math.sin(x))
-      end
+    def to_s
+      "Line(#{a.x} #{a.y}) (#{b.x} #{b.y})"
+    end
+
+    def length
+      a.distance_to_point(b)
     end
   end
 end

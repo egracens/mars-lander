@@ -7,6 +7,10 @@ module Geometry
       @y = y
     end
 
+    def to_s
+      "Vector #{x} #{y}"
+    end
+
     def +(another_vector)
       Vector.new(x + another_vector.x, y + another_vector.y)
     end

@@ -5,7 +5,7 @@ module Bots
     end
 
     def turn(interpreter_response)
-      '0 0'
+      '15 3'
     end
   end
 end
